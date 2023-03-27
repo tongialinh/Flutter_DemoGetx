@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>742228162207-l794kpf1rptfep5sgahaqdmq4k117ltl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.742228162207-l794kpf1rptfep5sgahaqdmq4k117ltl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBEnV-KDWI7lazwaW3Oqzk2lA4jPkUNOdY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>742228162207</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.studyApp</string>
+	<key>PROJECT_ID</key>
+	<string>study-app-b5e47</string>
+	<key>STORAGE_BUCKET</key>
+	<string>study-app-b5e47.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:742228162207:ios:a903cf521dcdd8024d14aa</string>
+	<key>DATABASE_URL</key>
+	<string>https://study-app-b5e47-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
