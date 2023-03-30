@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:study_app/configs/themes/app_colors.dart';
+import 'package:get/get.dart';
 
 class MainButton extends StatelessWidget {
   const MainButton(
@@ -35,9 +36,9 @@ class MainButton extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: child ??Center(
-                  child: Text(title, style: const TextStyle(
+                  child: Text(title, style:  TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: onSurfaceTextColor)),
+                      color: Get.isDarkMode?onSurfaceTextColor:Theme.of(context).primaryColor)),
 
           ),
               ),
