@@ -13,6 +13,7 @@ import 'package:study_app/widgets/common/question_place_holder.dart';
 import 'package:study_app/widgets/content_area.dart';
 import 'package:study_app/widgets/questions/answer_card.dart';
 import 'package:study_app/widgets/questions/countdown_timer.dart';
+import 'package:study_app/screens/question/test_overview_screen.dart';
 
 class QuestionsScreen extends GetView<QuestionsController> {
   const QuestionsScreen({Key? key}) : super(key: key);
@@ -121,7 +122,7 @@ class QuestionsScreen extends GetView<QuestionsController> {
                                 visible: controller.loadingStatus.value==LoadingStatus.completed,
                                 child: MainButton(
                               onTap: () {
-                                controller.isLastQuestions?Container():
+                                controller.isLastQuestions?Get.toNamed(TestOverviewScreen.routeName):
                                 controller.nextQuestion();
                               },
                               title: controller.isLastQuestions?'Complete':'Next',

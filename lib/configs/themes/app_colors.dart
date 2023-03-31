@@ -5,6 +5,9 @@ import 'package:study_app/configs/themes/ui_parameters.dart';
 import 'package:get/get.dart';
 
 const Color onSurfaceTextColor = Colors.white;
+const Color correctAnserColor = Color(0xFF3ac3cb);
+const Color wrongAnswerColor = Color(0xFFf85187);
+const Color notAnsweredColr = Color(0xFF2a3c65);
 
 const mainGradientLight = LinearGradient(
   begin: Alignment.topLeft,

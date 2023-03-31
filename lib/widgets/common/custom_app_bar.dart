@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:study_app/configs/themes/custom_text_styles.dart';
 import 'package:study_app/configs/themes/ui_parameters.dart';
+import 'package:study_app/screens/question/test_overview_screen.dart';
 import 'package:study_app/widgets/app_circle_button.dart';
 import 'package:study_app/configs/themes/app_icons.dart';
+import 'package:get/get.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
   const CustomAppBar({Key? key,
@@ -26,7 +28,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
         child: Padding(
           padding:  EdgeInsets.symmetric(
             horizontal: mobileScreenPadding,
-            vertical: mobileScreenPadding
+            vertical: mobileScreenPadding/1.2
           ),
           child: Stack(
             children: [
@@ -50,7 +52,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
                       child: AppCircleButton(
                         child: const Icon(AppIcons.menu),
 
-                        onTap: onMenuActionTap??null,
+                        onTap: onMenuActionTap??()=>Get.toNamed(TestOverviewScreen.routeName),
                       ),
                   )
                 ],
