@@ -1,4 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:study_app/controllers/auth_controller.dart';
 import 'package:study_app/controllers/question_papers/questions_controller.dart';
+import 'package:study_app/firebase_ref/references.dart';
+import 'package:get/get.dart';
 
 extension QuestionsControllerExtension on QuestionsController{
 
@@ -16,5 +20,22 @@ extension QuestionsControllerExtension on QuestionsController{
       (questionPaperModel.timeSeconds - remainSeconds)/questionPaperModel.timeSeconds*100;
     return points.toStringAsFixed(2);
   }
-
+  Future<void> saveTestResults() async{
+    var batch = fireStore.batch();
+    User? _user = Get.find<AuthController>().getUser();
+    if(_user==null) return;
+    batch.set(
+        userRF.doc(_user.email)
+            .collection('myrecent_tests')
+            .doc(questionPaperModel.id),
+        {
+          "points":points,
+          "correct_answers": '$correctQuestionCount/${allQuestions.length}',
+          "question_id": questionPaperModel.id,
+          'time': questionPaperModel.timeSeconds-remainSeconds
+        }
+    );
+    batch.commit();
+    navigateHome();
+  }
 }
