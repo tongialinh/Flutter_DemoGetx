@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:study_app/firebase_ref/loading_status.dart';
 import 'package:study_app/firebase_ref/references.dart';
 import 'package:study_app/models/question_paper_model.dart';
+import 'package:study_app/screens/question/result_screen.dart';
 
 class QuestionsController extends GetxController {
   final loadingStatus = LoadingStatus.loading.obs;
@@ -129,6 +130,6 @@ class QuestionsController extends GetxController {
 
   void complete(){
     _timer!.cancel();
-    Get.offAndToNamed("/home");
+    Get.offAndToNamed(ResultScreen.routeName);
   }
 }
